@@ -10,7 +10,7 @@ Buatlah program C yang bisa menghitung faktorial secara parallel lalu menampilka
 		5! = 120
 	
 
-Source Code : <a href=""> Soal1 </a>
+Source Code : <a href=""> Soal1 </a> <br>
 Jawab :
 
 ## No2
@@ -28,7 +28,7 @@ Pada suatu hari ada orang yang ingin berjualan 1 jenis barang secara private, di
     g. Server penjual akan mencetak stok saat ini setiap 5 detik sekali
     h. Menggunakan thread, socket, shared memory
 
-Source Code : <a href=""> Soal2 </a>   
+Source Code : <a href=""> Soal2 </a> <br>
 Jawab :
 
 ## No3	
@@ -53,7 +53,7 @@ Agmal dan Iraj merupakan 2 sahabat yang sedang kuliah dan hidup satu kostan, say
 
         ▪ Syarat Menggunakan Lebih dari 1 Thread
 
-Source Code : <a href=""> Soal3 </a>
+Source Code : <a href=""> Soal3 </a> <br>
 Jawab :
 
 ## No4
@@ -66,9 +66,22 @@ Buatlah sebuah program C dimana dapat menyimpan list proses yang sedang berjalan
 	• Ketika Telah Selesai melakukan kompress file .zip masing-masing file, maka program akan memberi pesan “Menunggu 15 detik untuk mengekstrak kembali”
 	• Wajib Menggunakan Multithreading
 	• Boleh menggunakan system
-Source Code : <a href=""> Soal4 </a>
-
-Jawab :
+Source Code : <a href=""> Soal4 </a> <br>
+Jawab : 
+<ul>
+	<li>Langkah pertama yang kami lakukan yaitu membuat fungsi Proses1 dan Proses2.</li>
+	<li>Di tiap fungsi terdapat pengecekan terlebih dahulu terhadap direktori FolderProses1 dan FolderProses2.</li>
+	<li>Apabila folder belum ada makan kita buat directory tersebut.</li>
+	<li>Kemudian kita cek lagi apakah file SimpanProses1.txt pada direktori FolderProses1 dan SimpanProses2.txt pada direktori FolderProses2 itu ada atau tidak.</li>
+	<li>Apabila file ada maka kita hapus terlebih dahulu supaya data yang akan disimpan sebanyak 10 proses yang akan kita ambil sekarang.</li>
+	<li>Lalu berikutnya kita mengeksekusi command "ps -aux | tail -n 10" dan dioutputkan e direktori tujuan sesuai fungsi prosesnya.</li>
+	<li>Kemudian kita zip file SimpanProses1.txt dan SimpanProses2.txt dengan nama KompresProses1.zip dan KompresProses2.zip.</li>
+	<li>Lalu kita sleep selama 15 detik. Lalu outputkan "Menunggu 15 detik untuk mengekstrak kembali\n".</li>
+	<li>Setelah itu lakukan unzip KompresProses1.zip dan KompresProses2.zip.</li>
+	<li>Kemudian hapus file KompresProses1.zip dan KompresProses2.zip.</li>
+	<li>Kemudian langkah yang kami lakukan yaitu membuat main function dimana kami membuat 2 thread. Thread yang pertama mengeksekusi fungsi Proses1 dan thread kedua mengeksekusi fungsi Proses2.</li>
+	<li>Setelah membuat thread tersebut kami pun menjoinkan kedua thread yang telah dibuat tadi supaya kedua thread bisa berjalan secara bersamaan.</li>
+</ul>
 
 ## No5
 Angga, adik Jiwang akan berulang tahun yang ke sembilan pada tanggal 6 April besok. Karena lupa menabung, Jiwang tidak mempunyai uang sepeserpun untuk membelikan Angga kado. Kamu sebagai sahabat Jiwang ingin membantu Jiwang membahagiakan adiknya sehingga kamu menawarkan bantuan membuatkan permainan komputer sederhana menggunakan program C. Jiwang sangat menyukai idemu tersebut. Berikut permainan yang Jiwang minta. 
@@ -132,5 +145,5 @@ F. Pada program penjual, program selalu menampilkan food stock toko. Selain itu,
 
 G. Pastikan terminal hanya mendisplay status detik ini sesuai scene terkait (hint: menggunakan system(“clear”))
 
-Source Code : <a href=""> Soal5 </a>
+Source Code : <a href=""> Soal5 </a> <br>
 Jawab :
