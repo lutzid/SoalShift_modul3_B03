@@ -15,6 +15,7 @@ Jawab :
 
 ## No2
 Pada suatu hari ada orang yang ingin berjualan 1 jenis barang secara private, dia memintamu membuat program C dengan spesifikasi sebagai berikut:
+
     a. Terdapat 2 server: server penjual dan server pembeli
     b. 1 server hanya bisa terkoneksi dengan 1 client
     c. Server penjual dan server pembeli memiliki stok barang yang selalu sama
