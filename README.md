@@ -175,6 +175,7 @@ Pada soal ini terdapat 2 program yang dibuat, yaitu
 	<li>Apabila memilih pilihan kedua pada menu standby, maka akan terjadi cooldown dan setiap detiknya akan dilakukan refresh pada terminal</li>
 	<li>Apabila hunger status sudah melebihi batas maksimal, maka hunger status akan langsung di set pada nilai 200, karena tidak dapat bertambah lagi, apabila hunger status dan atau bath status saat terjadi pengurangan bernilai kurang dari sama dengan 0, maka status diset 0, dan tidak dapat menjadi negatif atau kurang dari 0</li>
 </ul>
+
 ### 2. Shop
 <ul>
 	<li>Langkah pertama yang kami lakukan pada program ini adalah dengan membuat thread untuk menu shop pada program penjual ini</li>
