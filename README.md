@@ -37,8 +37,18 @@ Pada suatu hari ada orang yang ingin berjualan 1 jenis barang secara private, di
     g. Server penjual akan mencetak stok saat ini setiap 5 detik sekali
     h. Menggunakan thread, socket, shared memory
 
-Source Code : <a href=""> Soal2 </a> <br>
+Source Code : 
+<a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal2/soal2clientpembeli.c"> Soal2ClientPembeli </a> <br>
+<a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal2/soal2clientpenjual.c"> Soal2ClientPenjual </a> <br>
+<a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal2/soal2serverpembeli.c"> Soal2ServerPembeli </a> <br>
+<a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal2/soal2serverpenjual.c"> Soal2ServerPenjual </a> <br>
 Jawab :
+<ul>
+	<li>Langkah pertama kami membuat server penjual terlebih dahulu. Dimana didalamnya terdapat thread untuk melakukan print stock yang ada tiap 5 detik. Di kedua server baik server penjual dan server pembeli terdapat shared memory yang mana shared memory itu digunaan untuk menyimpan stock. Kemudian di server penjual akan mengecek command yang dikirimkan dari client penjual apabila command "tambah" maka stock ditambah dan akan output Command Benar di client. Apabila command tidak sesuai maka akan outputkan Command Salah di client.</li>
+	<li>Kemudian untuk client penjual akan selalu melakukan loop untuk inputan command yang akan dikirimkan ke server penjual.</li>
+	<li>Untuk server pembeli berisi shared memory untuk menyimpan stock kemudian mengecek command dari client apabila command berupa string beli dan stock lebih dari 0 maka akan mengirim pesan ke client berupa transaksi sukses dan stock berkurang 1. Apabila stock 0 maka akan mengirim pesan Transaksi gagal ke client. Apabila command salah maka server akan mengirim pesan ke client berupa string Command salah.</li>
+	<li>Kemudian untuk client pembeli akan selalu melakukan loop untuk inputan command yang akan dikirimkan ke server pembeli.</li>
+</ul>
 
 ## No3	
 Agmal dan Iraj merupakan 2 sahabat yang sedang kuliah dan hidup satu kostan, sayangnya mereka mempunyai gaya hidup yang berkebalikan, dimana Iraj merupakan laki-laki yang sangat sehat,rajin berolahraga dan bangun tidak pernah kesiangan sedangkan Agmal hampir menghabiskan setengah umur hidupnya hanya untuk tidur dan ‘ngoding’. Dikarenakan mereka sahabat yang baik, Agmal dan iraj sama-sama ingin membuat satu sama lain mengikuti gaya hidup mereka dengan cara membuat Iraj sering tidur seperti Agmal, atau membuat Agmal selalu bangun pagi seperti Iraj. Buatlah suatu program C untuk menggambarkan kehidupan mereka dengan spesifikasi sebagai berikut:
@@ -82,21 +92,21 @@ Buatlah sebuah program C dimana dapat menyimpan list proses yang sedang berjalan
 	• Ketika Telah Selesai melakukan kompress file .zip masing-masing file, maka program akan memberi pesan “Menunggu 15 detik untuk mengekstrak kembali”
 	• Wajib Menggunakan Multithreading
 	• Boleh menggunakan system
-Source Code : <a href=""> Soal4 </a> <br>
+Source Code : <a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal4/soal4.c"> Soal4 </a> <br>
 Jawab : 
 <ul>
-	<li>Langkah pertama yang kami lakukan yaitu membuat fungsi Proses1 dan Proses2.</li>
+	<li>Langkah pertama yang kami lakukan yaitu membuat fungsi Simpan1 dan Simpan2 </li>
 	<li>Di tiap fungsi terdapat pengecekan terlebih dahulu terhadap direktori FolderProses1 dan FolderProses2.</li>
-	<li>Apabila folder belum ada makan kita buat directory tersebut.</li>
+	<li>Apabila folder belum ada maka kita buat directory tersebut.</li>
 	<li>Kemudian kita cek lagi apakah file SimpanProses1.txt pada direktori FolderProses1 dan SimpanProses2.txt pada direktori FolderProses2 itu ada atau tidak.</li>
 	<li>Apabila file ada maka kita hapus terlebih dahulu supaya data yang akan disimpan sebanyak 10 proses yang akan kita ambil sekarang.</li>
-	<li>Lalu berikutnya kita mengeksekusi command "ps -aux | tail -n 10" dan dioutputkan e direktori tujuan sesuai fungsi prosesnya.</li>
-	<li>Kemudian kita zip file SimpanProses1.txt dan SimpanProses2.txt dengan nama KompresProses1.zip dan KompresProses2.zip.</li>
-	<li>Lalu kita sleep selama 15 detik. Lalu outputkan "Menunggu 15 detik untuk mengekstrak kembali\n".</li>
-	<li>Setelah itu lakukan unzip KompresProses1.zip dan KompresProses2.zip.</li>
+	<li>Lalu berikutnya kita mengeksekusi command "ps -aux | tail -n 10" dan dioutputkan ke direktori tujuan sesuai fungsi prosesnya.</li>
+	<li>Kemudian kita buat fungsi Zip1 dan Zip2 yang digunakan untuk melakukan zip file SimpanProses1.txt dan SimpanProses2.txt dengan nama KompresProses1.zip dan KompresProses2.zip.</li>
+	<li>Lalu kita hapus file SimpanProses1.txt dan SimpanProses2.txt".</li>
+	<li>Kemudian fungsi berikutnya yaitu Unzip1 dan Unzip2 yang tugasnya melakukan unzip KompresProses1.zip dan KompresProses2.zip.</li>
 	<li>Kemudian hapus file KompresProses1.zip dan KompresProses2.zip.</li>
-	<li>Kemudian langkah yang kami lakukan yaitu membuat main function dimana kami membuat 2 thread. Thread yang pertama mengeksekusi fungsi Proses1 dan thread kedua mengeksekusi fungsi Proses2.</li>
-	<li>Setelah membuat thread tersebut kami pun menjoinkan kedua thread yang telah dibuat tadi supaya kedua thread bisa berjalan secara bersamaan.</li>
+	<li>Kemudian langkah yang kami lakukan yaitu membuat main function dimana kami membuat 6 thread. 2 thread yang pertama mengeksekusi fungsi Simpan1 dan Simpan2. 2 thread berikutnya mengeksekusi Zip1 dan Zip2. Kemudian 2 thread terakhir mengeksekusi Unzip1 dan Unzip2</li>
+	<li>Setelah membuat thread tersebut kami pun menjoinkan tiap 2 thread yang telah dibuat tadi supaya tiap 2 thread bisa berjalan secara bersamaan.</li>
 </ul>
 
 ## No5
