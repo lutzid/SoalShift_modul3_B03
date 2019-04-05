@@ -10,8 +10,16 @@ Buatlah program C yang bisa menghitung faktorial secara parallel lalu menampilka
 		5! = 120
 	
 
-Source Code : <a href=""> Soal1 </a> <br>
+Source Code : <a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal1/Soal1.c"> Soal1 </a> <br>
 Jawab :
+<ul>
+	<li>Langkah pertama yang kami lakukan adalah dengan menghitung faktorial dari 0 sampai dengan 15, kenapa 15? Karena tipe data yang digunakan merupakan tipe integer/ long long integer, untuk integer sendiri kurang lebih hanya bisa sampai dengan 12 faktorial, sedangkan long long integer hanya bisa sampai kurang lebih 19 faktorial, dan apabila kita memasang terlalu mepet, nantinya ditakutkan bahwa akan terjadi overflow</li>
+	<li>Langkah selanjutnya kami melakukan thread untuk setiap argumen yang ada kecuali argumen ke 0, karena argumen tersebut merupakan nama program yang dieksekusi.</li>
+	<li>Pada fungsi threadnya, kami mendapatkan berapa nilai argumen tersebut apabila di convert ke integer, lalu memasukkan angka tersebut ke dalam key dari array, dan menambahkan array key tersebut</li>
+	<li>Setelah melakukan thread, kami melakukan join_thread pada setiap argumen</li>
+	<li>Setelah melakukan join_thread tersebut, kami print dari bilangan ke 0 sampai dengan ke 15, dan melakukan print setiap angka tersebut sebanyak kemunculan angka tersebut</li>
+	
+</ul>
 
 ## No2
 Pada suatu hari ada orang yang ingin berjualan 1 jenis barang secara private, dia memintamu membuat program C dengan spesifikasi sebagai berikut:
@@ -54,8 +62,15 @@ Agmal dan Iraj merupakan 2 sahabat yang sedang kuliah dan hidup satu kostan, say
 
         ▪ Syarat Menggunakan Lebih dari 1 Thread
 
-Source Code : <a href=""> Soal3 </a> <br>
+Source Code : <a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal3/Soal3.c"> Soal3 </a> <br>
 Jawab :
+<ul>
+	<li>Langkah pertama yang kami lakukan adalah membuat thread untuk agmal dan iraj</li>
+	<li>Setiap thread tersebut berguna untuk menambahkan/mengurangi status mereka tergantung pada perintah apa yang dijalankan</li>
+	<li>Apabila sebuah perintah dijalankan sebanyak 3 kali (kecuali perintah "All Status"), maka perintah yang lain yang berlawanan (kecuali "All Status") tidak dapat dijalankan selama 10 detik, dengan cara apabila salah satu perintah (kecuali "All Status"), sudah dijalankan sebanyak 3 kali, maka kami me-set sebuah variabel yang berguna untuk menghitung telah berapa lama sebuah command tidak dapat dijalankan</li>
+	<li>Program akan berjalan selama wake up status dari agmal masih kurang dari 100 atau spirit status dari iraj lebih dari 0</li>
+	<li>Apabila sudah memenuhi salah satu syarat tersebut, maka keluar dari infinite loop tersebut dan mengeluarkan hasil sesuai kondisi yang diminta</li>
+</ul>
 
 ## No4
 Buatlah sebuah program C dimana dapat menyimpan list proses yang sedang berjalan (ps -aux) maksimal 10 list proses. Dimana awalnya list proses disimpan dalam di 2 file ekstensi .txt yaitu  SimpanProses1.txt di direktori /home/Document/FolderProses1 dan SimpanProses2.txt di direktori /home/Document/FolderProses2 , setelah itu masing2 file di  kompres zip dengan format nama file KompresProses1.zip dan KompresProses2.zip dan file SimpanProses1.txt dan SimpanProses2.txt akan otomatis terhapus, setelah itu program akan menunggu selama 15 detik lalu program akan mengekstrak kembali file KompresProses1.zip dan KompresProses2.zip 
@@ -146,5 +161,23 @@ F. Pada program penjual, program selalu menampilkan food stock toko. Selain itu,
 
 G. Pastikan terminal hanya mendisplay status detik ini sesuai scene terkait (hint: menggunakan system(“clear”))
 
-Source Code : <a href=""> Soal5 </a> <br>
+Source Code : <a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal5/Soal5.c">Soal5</a> & <a href="https://github.com/lutzid/SoalShift_modul3_B03/blob/master/Soal5/Soal5Shop.c">Soal 5 Shop</a><br>
 Jawab :
+
+Pada soal ini terdapat 2 program yang dibuat, yaitu
+### 1. Program Game
+<ul>
+	<li>Langkah pertama yang kami lakukan adalah membuat 3 thread yaitu thread pada kondisi standby, battle, dan shop dan membuat fungsi untuk 3 kondisi tersebut</li>
+	<li>Untuk fungsi standby sendiri, kami melakukan print sesuai format yang ada, lalu setelah itu apabila memilih pilihan 1 atau 2, dia akan menambahkan hunger atau bath status sesuai dengan pilihan yang dipilih, apabila yang dipilih merupakan pilihan 3 atau 4, maka akan pindah ke menu yang diminta, dan apabila memilih pilihan 5, maka akan keluar dari program.</li>
+	<li>Pada fungsi battle, apabila memilih pilihan 1, maka akan mengurangi darah 20 pada setiap monster (monster milik kita dan monster musuh) apabila salah satu darah dari monster kurang dari sama dengan 20, maka akan keluar dan pindah ke menu standby, tapi apabila memilih pilihan 2, maka akan langsung pindah ke menu standby</li>
+	<li>Pada fungsi shop sendiri, apabila kita memilih pilihan 1 (beli), maka food stock user akan bertambah dan food stock dari toko akan berkurang dan akan berefek pada food stok dari toko pada program shop, apabila memilih pilihan kedua maka akan pindah ke standby menu</li>
+	<li>Apabila terjadi perubahan yaitu dengan ditandai memilih salah satu pilihan, maka akan dilakukan refresh pada terminal</li>
+	<li>Apabila memilih pilihan kedua pada menu standby, maka akan terjadi cooldown dan setiap detiknya akan dilakukan refresh pada terminal</li>
+	<li>Apabila hunger status sudah melebihi batas maksimal, maka hunger status akan langsung di set pada nilai 200, karena tidak dapat bertambah lagi, apabila hunger status dan atau bath status saat terjadi pengurangan bernilai kurang dari sama dengan 0, maka status diset 0, dan tidak dapat menjadi negatif atau kurang dari 0</li>
+</ul>
+### 2. Shop
+<ul>
+	<li>Langkah pertama yang kami lakukan pada program ini adalah dengan membuat thread untuk menu shop pada program penjual ini</li>
+	<li>Pada fungsi thread tersebut, apabila terjadi perubahan dengan ditandai memilih salah satu pilihan menu, maka akan dilakukan refresh pada terminal</li>
+	<li>Pada fungsi tersebut juga, apabila memilih pilihan 1, maka akan menambah stok toko tersebut dan akan berefek pada stok toko yang ada di program game dengan memanfaatkan shared memory, tapi apabila memilih pilihan 2, maka akan keluar dari program tersebut</li>
+</ul>
