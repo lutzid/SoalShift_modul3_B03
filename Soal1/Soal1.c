@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 #define debug(x) printf("%d\n", x);
-pthread_t tid[15];
-int cnt[15];
-long long arr[15];
+pthread_t tid[20];
+int cnt[20];
+long long arr[20];
 void precompute() {
 	int i;
 	arr[0] = 1;
