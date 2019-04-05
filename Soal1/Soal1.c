@@ -29,6 +29,7 @@ void *factorial(void *argv) {
 
 int main(int argc, char** argv) {
 	precompute();
+	memset(cnt, 0 ,sizeof(cnt));
 	int i = 1, j;
 	int err;
 	i = 1;
