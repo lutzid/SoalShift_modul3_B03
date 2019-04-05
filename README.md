@@ -7,12 +7,13 @@ Buatlah program C yang bisa menghitung faktorial secara parallel lalu menampilka
 	3! = 6
 	4! = 24
 	5! = 120
-	
-Source Code :
+
+Source Code : <a href=""> Soal1 </a>
 Jawab :
 
 ## No2
 Pada suatu hari ada orang yang ingin berjualan 1 jenis barang secara private, dia memintamu membuat program C dengan spesifikasi sebagai berikut:
+
     a. Terdapat 2 server: server penjual dan server pembeli
     b. 1 server hanya bisa terkoneksi dengan 1 client
     c. Server penjual dan server pembeli memiliki stok barang yang selalu sama
@@ -26,11 +27,12 @@ Pada suatu hari ada orang yang ingin berjualan 1 jenis barang secara private, di
     g. Server penjual akan mencetak stok saat ini setiap 5 detik sekali
     h. Menggunakan thread, socket, shared memory
 
-Source Code :    
+Source Code : <a href=""> Soal2 </a>   
 Jawab :
 
 ## No3	
 Agmal dan Iraj merupakan 2 sahabat yang sedang kuliah dan hidup satu kostan, sayangnya mereka mempunyai gaya hidup yang berkebalikan, dimana Iraj merupakan laki-laki yang sangat sehat,rajin berolahraga dan bangun tidak pernah kesiangan sedangkan Agmal hampir menghabiskan setengah umur hidupnya hanya untuk tidur dan ‘ngoding’. Dikarenakan mereka sahabat yang baik, Agmal dan iraj sama-sama ingin membuat satu sama lain mengikuti gaya hidup mereka dengan cara membuat Iraj sering tidur seperti Agmal, atau membuat Agmal selalu bangun pagi seperti Iraj. Buatlah suatu program C untuk menggambarkan kehidupan mereka dengan spesifikasi sebagai berikut:
+
     a. Terdapat 2 karakter Agmal dan Iraj
     b. Kedua karakter memiliki status yang unik
         ▪ Agmal mempunyai WakeUp_Status, di awal program memiliki status 0
@@ -50,11 +52,12 @@ Agmal dan Iraj merupakan 2 sahabat yang sedang kuliah dan hidup satu kostan, say
 
         ▪ Syarat Menggunakan Lebih dari 1 Thread
 
-Source Code :
+Source Code : <a href=""> Soal3 </a>
 Jawab :
 
 ## No4
 Buatlah sebuah program C dimana dapat menyimpan list proses yang sedang berjalan (ps -aux) maksimal 10 list proses. Dimana awalnya list proses disimpan dalam di 2 file ekstensi .txt yaitu  SimpanProses1.txt di direktori /home/Document/FolderProses1 dan SimpanProses2.txt di direktori /home/Document/FolderProses2 , setelah itu masing2 file di  kompres zip dengan format nama file KompresProses1.zip dan KompresProses2.zip dan file SimpanProses1.txt dan SimpanProses2.txt akan otomatis terhapus, setelah itu program akan menunggu selama 15 detik lalu program akan mengekstrak kembali file KompresProses1.zip dan KompresProses2.zip 
+
 	Dengan Syarat : 
 	• Setiap list proses yang di simpan dalam masing-masing file .txt harus berjalan bersama-sama
 	• Ketika mengkompres masing-masing file .txt harus berjalan bersama-sama
@@ -63,11 +66,13 @@ Buatlah sebuah program C dimana dapat menyimpan list proses yang sedang berjalan
 	• Wajib Menggunakan Multithreading
 	• Boleh menggunakan system
 
-Source Code :
+Source Code : <a href=""> Soal4 </a>
+
 Jawab :
 
 ## No5
 Angga, adik Jiwang akan berulang tahun yang ke sembilan pada tanggal 6 April besok. Karena lupa menabung, Jiwang tidak mempunyai uang sepeserpun untuk membelikan Angga kado. Kamu sebagai sahabat Jiwang ingin membantu Jiwang membahagiakan adiknya sehingga kamu menawarkan bantuan membuatkan permainan komputer sederhana menggunakan program C. Jiwang sangat menyukai idemu tersebut. Berikut permainan yang Jiwang minta. 
+
     a. Pemain memelihara seekor monster lucu dalam permainan. Pemain dapat  memberi nama pada monsternya.
     b. Monster pemain memiliki hunger status yang berawal dengan nilai 200 (maksimalnya) dan nanti akan berkurang 5 tiap 10 detik.Ketika hunger status mencapai angka nol, pemain akan kalah. Hunger status dapat bertambah 15 apabila pemain memberi makan kepada monster, tetapi banyak makanan terbatas dan harus beli di Market.
     c. Monster pemain memiliki hygiene status yang berawal dari 100 dan nanti berkurang 10 tiap 30 detik. Ketika hygiene status mencapai angka nol, pemain akan kalah. Hygiene status' dapat bertambah 30 hanya dengan memandikan monster. Pemain dapat memandikannya setiap 20 detik(cooldownnya 20 detik).
@@ -80,6 +85,7 @@ Angga, adik Jiwang akan berulang tahun yang ke sembilan pada tanggal 6 April bes
         ▪ Penjual (terpisah)
             • Bisa mengecek stok makanan yang ada di toko
             • Penjual dapat menambah stok makanan.
+
 Spesifikasi program:
 A. Program mampu mendeteksi input berupa key press. (Program bisa berjalan tanpa perlu menekan tombol enter)
 B. Program terdiri dari 3 scene yaitu standby, battle, dan shop.
@@ -126,5 +132,5 @@ F. Pada program penjual, program selalu menampilkan food stock toko. Selain itu,
 
 G. Pastikan terminal hanya mendisplay status detik ini sesuai scene terkait (hint: menggunakan system(“clear”))
 
-Source Code :
+Source Code : <a href=""> Soal5 </a>
 Jawab :
